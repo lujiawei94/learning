@@ -1,0 +1,40 @@
+git init
+git config user.name 10257854
+git config user.email 11@11.com
+git config --list --global/--local
+
+git add ...
+git commit -m'...'
+git mv afile bfile 重命名
+git rm filename 删除文件（工作区和暂存区会同步）
+
+git log --oneline
+git log -n1
+
+git branch -av  # 查看本地分支
+git branch -a  # 查看远端分支
+git checkeout switchbranchname
+git branch -b newbranch
+git branch -d delbranch
+gitk --all
+
+git rebase -i gitlog_hashnum
+
+git diff --cached   (暂存区和head比较)
+git diff (工作区和暂存区的比较)
+git diff master fix -- filename (比较master和fix分支中文件的差异)
+
+git reset HEAD -- filename  暂存区恢复为head（不加-- 则全盘恢复）
+git checkout -- filename    工作区恢复为暂存区（不加-- 则全盘恢复）
+git reset --hard someCommitHash 将head指向某个commit，工作区和暂存区会被同步，慎用
+
+git stash
+git stash apply(保留)
+git stash pop
+
+.gitignore
+
+git clone --bare (file://, https://, ssh)
+git remote add test_repository https://....git  # 跟远端代码库建立联系
+git remote -v  # 远端代码库信息
+git push test_repository
