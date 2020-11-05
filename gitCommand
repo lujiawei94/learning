@@ -26,7 +26,7 @@ git diff master fix -- filename (比较master和fix分支中文件的差异)
 
 git reset HEAD -- filename  暂存区恢复为head（不加-- 则全盘恢复）
 git checkout -- filename    工作区恢复为暂存区（不加-- 则全盘恢复）
-git reset --hard someCommitHash 将head指向某个commit，工作区和暂存区会被同步，慎用
+git reset --hard someCommitHash 将head指向某个commit，工作区和暂存区会被同步，慎用（常用来本地版本回退）
 
 git stash
 git stash apply(保留)
@@ -38,3 +38,11 @@ git clone --bare (file://, https://, ssh)
 git remote add test_repository https://....git  # 跟远端代码库建立联系
 git remote -v  # 远端代码库信息
 git push test_repository
+
+git pull 跟远端同步
+
+远端与本地同名的分支为non-fast-forward关系（非父子关系）时，
+git fetch github master
+git merge --allow-unrelated-histories github/master  # 当两分支不在同一树上时
+git push github
+
