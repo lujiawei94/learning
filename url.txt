@@ -1,0 +1,2 @@
+https://github.com/shadowsocks/shadowsocks-windows/releases/tag/4.3.2.0
+https://github.com/shadowsocks/shadowsocks-windows/wiki/Troubleshooting
